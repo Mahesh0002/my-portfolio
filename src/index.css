@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System - Cool Teal Theme */
+
+@layer base {
+:root {
+  /* Rich Earthy Warm Theme */
+  --background: 0 0% 0%;                 /* #000000 - Black */
+  --foreground: 20 47% 66%;              /* #BA714D - Warm light brown */
+
+  --card: 18 58% 37%;                    /* #984A2C - Burnt sienna */
+  --card-foreground: 20 47% 66%;         /* #BA714D */
+
+  --popover: 18 58% 37%;
+  --popover-foreground: 20 47% 66%;
+
+  --primary: 18 58% 37%;                 /* #984A2C */
+  --primary-foreground: 0 0% 0%;         /* #000000 */
+  --primary-glow: 20 47% 75%;            /* Brighter #BA714D for glow */
+
+  --secondary: 330 10% 5%;               /* #0D0B0C */
+  --secondary-foreground: 20 47% 66%;
+
+  --muted: 330 10% 8%;                   /* Dark muted charcoal */
+  --muted-foreground: 20 30% 60%;        /* Softer warm brown */
+
+  --accent: 20 47% 66%;                  /* #BA714D */
+  --accent-foreground: 0 0% 0%;          /* Black text on accent */
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 20 47% 66%;
+
+  --border: 330 10% 8%;                  /* #0D0B0C */
+  --input: 330 10% 8%;                   /* #0D0B0C */
+  --ring: 20 47% 66%;                    /* Accent ring */
+
+  --radius: 0.75rem;
+
+  /* Portfolio specific colors */
+  --portfolio-bg: 0 0% 0%;               /* #000000 */
+  --portfolio-surface: 330 10% 5%;       /* #0D0B0C */
+  --portfolio-overlay: 330 10% 8%;       /* #0D0B0C */
+  --portfolio-text: 0 0% 100%;           /* #FFFFFF */
+  --portfolio-text-muted: 0 0% 80%;      /* Light gray */
+  --portfolio-accent: 20 47% 66%;        /* #BA714D */
+  --portfolio-accent-glow: 20 47% 75%;   /* Brighter glow version */
+
+  /* Gradients with new colors */
+  --gradient-primary: linear-gradient(135deg, hsl(18 58% 37%), hsl(20 47% 66%));
+  --gradient-subtle: linear-gradient(180deg, hsl(18 58% 37%), hsl(0 0% 0%));
+  --gradient-glow: radial-gradient(circle at center, hsl(20 47% 66% / 0.3), transparent 70%);
+
+  /* Shadows with warm tones */
+  --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.7);
+  --shadow-glow: 0 0 40px hsl(20 47% 66% / 0.4);
+  --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.5);
+
+  /* Animations */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-portfolio-bg text-portfolio-text;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .portfolio-card {
+    @apply bg-portfolio-surface border border-border rounded-lg p-6 shadow-card backdrop-blur-sm;
+    transition: var(--transition-smooth);
+  }
+
+  .portfolio-card:hover {
+    @apply shadow-glow transform -translate-y-1;
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-effect {
+    position: relative;
+  }
+
+  .glow-effect::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: var(--gradient-glow);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: var(--transition-smooth);
+  }
+
+  .glow-effect:hover::before {
+    opacity: 1;
+  }
+
+  .hero-gradient {
+    background: var(--gradient-subtle);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-glow);
+    opacity: 0.1;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .particle-float {
+    animation: particleFloat 8s ease-in-out infinite;
+  }
+
+  .orbit-animation {
+    animation: orbit 20s linear infinite;
+  }
+
+  .wave-animation {
+    animation: wave 12s ease-in-out infinite;
+  }
+
+  .typing-animation {
+    border-right: 2px solid hsl(var(--portfolio-accent));
+    animation: blink 1s infinite;
+  }
+
+  .scroll-indicator {
+    animation: bounce 2s infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: hsl(var(--portfolio-accent)); }
+  51%, 100% { border-color: transparent; }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+  40%, 43% { transform: translateY(-15px); }
+  70% { transform: translateY(-7px); }
+  90% { transform: translateY(-3px); }
+}
+
+@keyframes particleFloat {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.7;
+  }
+  25% { 
+    transform: translateY(-20px) translateX(10px) scale(1.1);
+    opacity: 1;
+  }
+  50% { 
+    transform: translateY(-10px) translateX(-15px) scale(0.9);
+    opacity: 0.8;
+  }
+  75% { 
+    transform: translateY(-25px) translateX(5px) scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes wave {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+    opacity: 0.1;
+  }
+  50% { 
+    transform: translateY(-30px) scale(1.1);
+    opacity: 0.2;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
