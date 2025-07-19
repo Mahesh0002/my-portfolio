@@ -6,38 +6,50 @@ const Projects = () => {
     {
       id: 1,
       title: 'Jōtai – AI-Powered Productivity & Insights Dashboard',
-      description: 'Jōtai is a futuristic, cyberpunk-themed productivity dashboard that gamifies daily tasks and integrates an intelligent personal assistant. Built with React, it features voice-controlled goal management, performance analytics, and real-time updates — all styled with glowing neon visuals and a responsive RPG-style interface.',
+      description:
+        'Jōtai is a futuristic, cyberpunk-themed productivity dashboard that gamifies daily tasks and integrates an intelligent personal assistant. Built with React, it features voice-controlled goal management, performance analytics, and real-time updates — all styled with glowing neon visuals and a responsive RPG-style interface.',
       keyFeatures: [
         'Voice-activated assistant (Gemini + Deepgram) to add/remove goals and interact with the dashboard',
         'Daily Quest system with visual progress tracking',
         'Analytics panel showing streaks, completion rate, and focus time',
         'Pomodoro Timer, Habit Tracker, and Inventory Notes',
         'Real-time data integration: Tech News, Stock Prices (Twelve Data), Weather Updates (OpenWeather), Currency Rates',
-        'Daily Kanji learning with pronunciation support (VoiceRSS)'
+        'Daily Kanji learning with pronunciation support (VoiceRSS)',
       ],
-      technologies: ['React.js', 'JavaScript', 'REST APIs', 'Gemini AI', 'Deepgram', 'Twelve Data', 'VoiceRSS', 'OpenWeather', 'Custom CSS'],
+      technologies: [
+        'React.js',
+        'JavaScript',
+        'REST APIs',
+        'Gemini AI',
+        'Deepgram',
+        'Twelve Data',
+        'VoiceRSS',
+        'OpenWeather',
+        'Custom CSS',
+      ],
       links: {
-        live: '#',
-        github: '#'
-      }
+        live: '', // No live link due to private API keys
+        github: 'https://github.com/your-username/jotai-dashboard',
+      },
     },
     {
       id: 2,
       title: 'Campus Connect – Interactive Student Forum',
-      description: 'Campus Connect is a modern web-based student forum designed to facilitate academic discussions, peer support, and collaborative learning. It allows students to post questions, participate in threaded conversations, and engage with topics in a clean, responsive interface.',
+      description:
+        'Campus Connect is a modern web-based student forum designed to facilitate academic discussions, peer support, and collaborative learning. It allows students to post questions, participate in threaded conversations, and engage with topics in a clean, responsive interface.',
       keyFeatures: [
         'Post & reply system for Q&A and open discussions',
         'Thread categorization with topics and tags',
         'Simple and secure user authentication',
         'Admin controls for managing posts and users',
-        'Fully responsive UI for both desktop and mobile devices'
+        'Fully responsive UI for both desktop and mobile devices',
       ],
       technologies: ['HTML', 'CSS', 'JavaScript (Vanilla)'],
       links: {
         live: 'https://student-connect-web.github.io/testing0/',
-        github: 'https://github.com/student-connect-web/testing0.git'
-      }
-    }
+        github: 'https://github.com/student-connect-web/testing0.git',
+      },
+    },
   ];
 
   return (
@@ -62,21 +74,40 @@ const Projects = () => {
                   <div className="flex items-start justify-between">
                     <h4 className="text-xl font-bold text-portfolio-text">{project.title}</h4>
                     <div className="flex space-x-2">
-                      {project.links.live && (
-                        <Button size="sm" variant="secondary">
-                          <ExternalLink size={16} className="mr-2" />
-                          Live Demo
+                      {project.links.live ? (
+                        <Button size="sm" variant="secondary" asChild>
+                          <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink size={16} className="mr-2" />
+                            Live Demo
+                          </a>
+                        </Button>
+                      ) : (
+                        <div title="⚠️ This project uses private API keys. Live demo is not available.">
+                          <Button
+                            size="sm"
+                            variant="secondary"
+                            className="opacity-60 cursor-not-allowed pointer-events-none"
+                            disabled
+                          >
+                            <ExternalLink size={16} className="mr-2" />
+                            Demo Unavailable
+                          </Button>
+                        </div>
+                      )}
+
+                      {project.links.github && (
+                        <Button size="sm" variant="outline" asChild>
+                          <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                            <Github size={16} className="mr-2" />
+                            Code
+                          </a>
                         </Button>
                       )}
-                      <Button size="sm" variant="outline">
-                        <Github size={16} className="mr-2" />
-                        Code
-                      </Button>
                     </div>
                   </div>
-                  
+
                   <p className="text-portfolio-text-muted">{project.description}</p>
-                  
+
                   <div>
                     <h5 className="text-sm font-semibold text-portfolio-text mb-3">Key Features:</h5>
                     <ul className="space-y-2">
@@ -88,7 +119,7 @@ const Projects = () => {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div>
                     <h5 className="text-sm font-semibold text-portfolio-text mb-3">Tech Stack:</h5>
                     <div className="flex flex-wrap gap-2">
@@ -109,9 +140,11 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg">
-            <Github size={20} className="mr-2" />
-            View All Projects on GitHub
+          <Button variant="outline" size="lg" asChild>
+            <a href="https://github.com/student-connect-web" target="_blank" rel="noopener noreferrer">
+              <Github size={20} className="mr-2" />
+              View All Projects on GitHub
+            </a>
           </Button>
         </div>
       </div>
