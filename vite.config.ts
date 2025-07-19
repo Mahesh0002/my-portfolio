@@ -5,6 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
   root: 'src', // Vite starts here
+  publicDir: '../public',
   server: {
     host: "::",
     port: 8080,
