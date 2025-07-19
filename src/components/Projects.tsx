@@ -34,8 +34,8 @@ const Projects = () => {
       ],
       technologies: ['HTML', 'CSS', 'JavaScript (Vanilla)'],
       links: {
-        live: '#',
-        github: '#'
+        live: 'https://student-connect-web.github.io/testing0/',
+        github: 'https://github.com/student-connect-web/testing0.git'
       }
     }
   ];
