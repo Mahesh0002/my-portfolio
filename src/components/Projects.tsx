@@ -74,25 +74,13 @@ const Projects = () => {
                   <div className="flex items-start justify-between">
                     <h4 className="text-xl font-bold text-portfolio-text">{project.title}</h4>
                     <div className="flex space-x-2">
-                      {project.links.live ? (
+                      {project.links.live && (
                         <Button size="sm" variant="secondary" asChild>
                           <a href={project.links.live} target="_blank" rel="noopener noreferrer">
                             <ExternalLink size={16} className="mr-2" />
                             Live Demo
                           </a>
                         </Button>
-                      ) : (
-                        <div title="⚠️ This project uses private API keys. Live demo is not available.">
-                          <Button
-                            size="sm"
-                            variant="secondary"
-                            className="opacity-60 cursor-not-allowed pointer-events-none"
-                            disabled
-                          >
-                            <ExternalLink size={16} className="mr-2" />
-                            Demo Unavailable
-                          </Button>
-                        </div>
                       )}
 
                       {project.links.github && (
