@@ -29,7 +29,7 @@ const Projects = () => {
       ],
       links: {
         live: '', // No live link due to private API keys
-        github: 'https://github.com/your-username/jotai-dashboard',
+        github: 'https://github.com/Mahesh0002/Jotai',
       },
     },
     {
