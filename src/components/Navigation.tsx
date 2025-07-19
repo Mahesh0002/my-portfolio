@@ -92,7 +92,7 @@ const Navigation = () => {
             >
               <Mail size={20} />
             </a>
-            <a href="/Resume. (1).pdf" download>
+            <a href="/resume.pdf" download>
             <Button variant="outline" size="sm" className="glow-effect">
               <Download size={16} className="mr-2" />
               Resume
