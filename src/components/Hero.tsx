@@ -91,7 +91,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <a href="/public/resume.pdf" download>
+              <a href="public/resume.pdf" download>
               <Button size="lg" className="glow-effect group">
                 <Download size={20} className="mr-2 group-hover:animate-bounce" />
                 Download Resume
