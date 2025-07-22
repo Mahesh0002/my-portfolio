@@ -35,7 +35,7 @@ const Hero = () => {
   }, [currentIndex, currentRole, roles]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden hero-gradient">
+    <section id="home" className="min-h-screen flex items-center justify-center relative backdrop-filter-[5px] overflow-hidden hero-gradient">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Optional background image */}
