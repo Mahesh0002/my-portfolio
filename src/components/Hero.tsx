@@ -40,7 +40,7 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         {/* Optional background image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center backdrop-filter-[5px] bg-no-repeat opacity-50"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
           style={{ 
             backgroundImage: `url('/bg5.jpg')` // You can replace this with any image path
           }}
