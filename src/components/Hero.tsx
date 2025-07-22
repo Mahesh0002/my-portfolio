@@ -35,12 +35,12 @@ const Hero = () => {
   }, [currentIndex, currentRole, roles]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative backdrop-filter-[5px] overflow-hidden hero-gradient">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden hero-gradient">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Optional background image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+          className="absolute inset-0 bg-cover bg-center backdrop-filter-[5px] bg-no-repeat opacity-50"
           style={{ 
             backgroundImage: `url('/bg5.jpg')` // You can replace this with any image path
           }}
