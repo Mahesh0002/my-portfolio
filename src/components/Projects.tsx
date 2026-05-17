@@ -5,7 +5,6 @@ const Projects = () => {
   const featuredProjects = [
     {
       id: 1,
-
       title: 'Traffic Accident Severity Classification',
       description: 'A deep learning pipeline designed to predict the severity of traffic accidents from visual data. The architecture leverages advanced computer vision models for robust spatial-temporal feature extraction and classification to enhance road safety analysis.',
       keyFeatures: [
@@ -47,30 +46,28 @@ const Projects = () => {
         'Dynamic state management for complex, multi-layered user interactions'
       ],
       technologies: ['React.js', 'Gemini AI', 'Deepgram API', 'REST APIs', 'Asynchronous JavaScript', 'UI/UX Design'],
-
       links: {
-        live: '', // No live link due to private API keys
-        github: 'https://github.com/Mahesh0002/Jotai',
-      },
+        live: '#',
+        github: '#'
+      }
     },
     {
       id: 4,
       title: 'Campus Connect – Interactive Student Forum',
-      description:
-        'Campus Connect is a modern web-based student forum designed to facilitate academic discussions, peer support, and collaborative learning. It allows students to post questions, participate in threaded conversations, and engage with topics in a clean, responsive interface.',
+      description: 'Campus Connect is a modern web-based student forum designed to facilitate academic discussions, peer support, and collaborative learning. It allows students to post questions, participate in threaded conversations, and engage with topics in a clean, responsive interface.',
       keyFeatures: [
         'Post & reply system for Q&A and open discussions',
         'Thread categorization with topics and tags',
         'Simple and secure user authentication',
         'Admin controls for managing posts and users',
-        'Fully responsive UI for both desktop and mobile devices',
+        'Fully responsive UI for both desktop and mobile devices'
       ],
       technologies: ['HTML', 'CSS', 'JavaScript (Vanilla)'],
       links: {
-        live: 'https://student-connect-web.github.io/testing0/',
-        github: 'https://github.com/student-connect-web/testing0.git',
-      },
-    },
+        live: '#',
+        github: '#'
+      }
+    }
   ];
 
   return (
