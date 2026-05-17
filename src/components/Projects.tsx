@@ -5,30 +5,6 @@ const Projects = () => {
   const featuredProjects = [
     {
       id: 1,
-<<<<<<< HEAD
-      title: 'Jōtai – AI-Powered Productivity & Insights Dashboard',
-      description:
-        'Jōtai is a futuristic, cyberpunk-themed productivity dashboard that gamifies daily tasks and integrates an intelligent personal assistant. Built with React, it features voice-controlled goal management, performance analytics, and real-time updates — all styled with glowing neon visuals and a responsive RPG-style interface.',
-      keyFeatures: [
-        'Voice-activated assistant (Gemini + Deepgram) to add/remove goals and interact with the dashboard',
-        'Daily Quest system with visual progress tracking',
-        'Analytics panel showing streaks, completion rate, and focus time',
-        'Pomodoro Timer, Habit Tracker, and Inventory Notes',
-        'Real-time data integration: Tech News, Stock Prices (Twelve Data), Weather Updates (OpenWeather), Currency Rates',
-        'Daily Kanji learning with pronunciation support (VoiceRSS)',
-      ],
-      technologies: [
-        'React.js',
-        'JavaScript',
-        'REST APIs',
-        'Gemini AI',
-        'Deepgram',
-        'Twelve Data',
-        'VoiceRSS',
-        'OpenWeather',
-        'Custom CSS',
-      ],
-=======
       title: 'Traffic Accident Severity Classification',
       description: 'A deep learning pipeline designed to predict the severity of traffic accidents from visual data. The architecture leverages advanced computer vision models for robust spatial-temporal feature extraction and classification to enhance road safety analysis.',
       keyFeatures: [
@@ -71,28 +47,27 @@ const Projects = () => {
       ],
       technologies: ['React.js', 'Gemini AI', 'Deepgram API', 'REST APIs', 'Asynchronous JavaScript', 'UI/UX Design'],
       links: {
-        live: '', // No live link due to private API keys
-        github: 'https://github.com/Mahesh0002/Jotai',
-      },
+        live: '#',
+        github: '#'
+      }
     },
     {
       id: 4,
       title: 'Campus Connect – Interactive Student Forum',
-      description:
-        'Campus Connect is a modern web-based student forum designed to facilitate academic discussions, peer support, and collaborative learning. It allows students to post questions, participate in threaded conversations, and engage with topics in a clean, responsive interface.',
+      description: 'Campus Connect is a modern web-based student forum designed to facilitate academic discussions, peer support, and collaborative learning. It allows students to post questions, participate in threaded conversations, and engage with topics in a clean, responsive interface.',
       keyFeatures: [
         'Post & reply system for Q&A and open discussions',
         'Thread categorization with topics and tags',
         'Simple and secure user authentication',
         'Admin controls for managing posts and users',
-        'Fully responsive UI for both desktop and mobile devices',
+        'Fully responsive UI for both desktop and mobile devices'
       ],
       technologies: ['HTML', 'CSS', 'JavaScript (Vanilla)'],
       links: {
-        live: 'https://student-connect-web.github.io/testing0/',
-        github: 'https://github.com/student-connect-web/testing0.git',
-      },
-    },
+        live: '#',
+        github: '#'
+      }
+    }
   ];
 
   return (
@@ -118,7 +93,6 @@ const Projects = () => {
                     <h4 className="text-xl font-bold text-portfolio-text">{project.title}</h4>
                     <div className="flex space-x-2">
                       {project.links.live && (
-<<<<<<< HEAD
                         <Button size="sm" variant="secondary" asChild>
                           <a href={project.links.live} target="_blank" rel="noopener noreferrer">
                             <ExternalLink size={16} className="mr-2" />
@@ -134,22 +108,6 @@ const Projects = () => {
                             Code
                           </a>
                         </Button>
-=======
-                        <a href={project.links.live} target="_blank" rel="noopener noreferrer">
-                          <Button size="sm" variant="secondary">
-                            <ExternalLink size={16} className="mr-2" />
-                            Live Demo
-                          </Button>
-                        </a>
-                      )}
-                      {project.links.github && (
-                        <a href={project.links.github} target="_blank" rel="noopener noreferrer">
-                          <Button size="sm" variant="outline">
-                            <Github size={16} className="mr-2" />
-                            Code
-                          </Button>
-                        </a>
->>>>>>> 1dff191 (fix: resolve deployment issues and update projects)
                       )}
                     </div >
                   </div >
