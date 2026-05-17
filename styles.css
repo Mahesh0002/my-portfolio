@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0a0a0a;
+    color: #b7f3ff;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url(Background.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.container {
+    padding: 0 10%;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 10%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    height: 50px;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2291a7;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-btn i {
+    font-size: 1.8rem;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-text h1 {
+    font-size: 4rem;
+    margin: 20px 0;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #8ba9acb1, 0 0 20px #8ba9acb1;
+    }
+    to {
+        text-shadow: 0 0 20px #8ba9acb1, 0 0 30px #8ba9acb1;
+    }
+}
+
+#about {
+    padding: 80px;
+    color: #e4fbff;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub {
+    font-size: 60px;
+    color: #ecfdff;
+    font-weight: 800;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #106070;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 100px;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #2291a7;
+    font-size: 15px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+#Work {
+    padding: 50px 0;
+    background-color: #080808;
+}
+
+.work-list {
+    margin-top: 30px;
+}
+
+.work-item {
+    margin-bottom: 20px;
+}
+
+.project-title {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.project-description {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.work-item:hover .project-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ffffff;
+    padding: 14px 50px;
+    border-radius: 8px;
+    background-color: #1b292a;
+    text-decoration: none;
+    color: #b7f3ff;
+    transition: background 1s;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #20494f;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.btn:hover {
+    background: #56888d;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #2291a7;
+    margin: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #2291a7;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: #2291a7;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+.form-group {
+    position: relative;
+    margin: 20px 0;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #2291a7;
+    background: transparent;
+    color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:valid ~ label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: #2291a7;
+}
+
+.success-popup {
+    position: fixed;
+    top: 20px;
+    right: -300px;
+    background: #2291a7;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: right 0.3s ease;
+}
+
+.success-popup.show {
+    right: 20px;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background: rgba(0,0,0,0.9);
+        flex-direction: column;
+        padding: 80px 30px;
+        transition: right 0.3s ease;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+}

@@ -5,35 +5,56 @@ const Projects = () => {
   const featuredProjects = [
     {
       id: 1,
-      title: 'Jōtai – AI-Powered Productivity & Insights Dashboard',
-      description:
-        'Jōtai is a futuristic, cyberpunk-themed productivity dashboard that gamifies daily tasks and integrates an intelligent personal assistant. Built with React, it features voice-controlled goal management, performance analytics, and real-time updates — all styled with glowing neon visuals and a responsive RPG-style interface.',
+
+      title: 'Traffic Accident Severity Classification',
+      description: 'A deep learning pipeline designed to predict the severity of traffic accidents from visual data. The architecture leverages advanced computer vision models for robust spatial-temporal feature extraction and classification to enhance road safety analysis.',
       keyFeatures: [
-        'Voice-activated assistant (Gemini + Deepgram) to add/remove goals and interact with the dashboard',
-        'Daily Quest system with visual progress tracking',
-        'Analytics panel showing streaks, completion rate, and focus time',
-        'Pomodoro Timer, Habit Tracker, and Inventory Notes',
-        'Real-time data integration: Tech News, Stock Prices (Twelve Data), Weather Updates (OpenWeather), Currency Rates',
-        'Daily Kanji learning with pronunciation support (VoiceRSS)',
+        'Image-based severity classification model achieving 73-74% accuracy',
+        'Integration of YOLO v11m and EfficientNet B0 for high-performance feature extraction',
+        'Implementation of a hybrid CNN-BiLSTM architecture for sequential data modeling',
+        'Optimized and deployed for efficient real-time inference'
       ],
-      technologies: [
-        'React.js',
-        'JavaScript',
-        'REST APIs',
-        'Gemini AI',
-        'Deepgram',
-        'Twelve Data',
-        'VoiceRSS',
-        'OpenWeather',
-        'Custom CSS',
+      technologies: ['Python', 'YOLO v11m', 'EfficientNet B0', 'CNN-BiLSTM', 'Deep Learning', 'Computer Vision'],
+      links: {
+        live: 'https://trafficaccidentseverity.l7310956.workers.dev/',
+        github: 'https://github.com/Mahesh0002/Accident-Severity'
+      }
+    },
+    {
+      id: 2,
+      title: 'Project Model Omega (Alpha-Omega Sovereign)',
+      description: 'A high-performance symbolic regression engine and simulation environment built to model complex physical systems. The project focuses on non-linear dynamics, utilizing hardware-accelerated parallel computing to optimize resource-intensive algorithms.',
+      keyFeatures: [
+        'Development of the OMEGA Protocol for advanced mathematical modeling and simulation',
+        'Implementation of a "C++ Nitro Hybrid" architecture targeting the Duffing Oscillator',
+        'Hardware-accelerated parallel computing leveraging CUDA for high-speed execution',
+        'Deployed and debugged within Google Colab environments for rapid iteration'
       ],
+      technologies: ['C++', 'CUDA', 'Python', 'Symbolic Regression', 'Machine Learning', 'Physics Simulation'],
+      links: {
+        live: '',
+        github: 'https://github.com/Mahesh0002/projectOmega'
+      }
+    },
+    {
+      id: 3,
+      title: 'Jōtai – AI-Powered Interface & Automation Dashboard',
+      description: 'An advanced, voice-controlled interface utilizing modern state management and asynchronous API orchestration. It integrates sophisticated LLMs and speech recognition pipelines to process natural language into actionable, real-time data visualizaitons.',
+      keyFeatures: [
+        'Integration of Gemini AI and Deepgram for low-latency Voice-to-Text and NLP processing',
+        'Real-time data stream orchestration (Twelve Data, OpenWeather) via asynchronous REST APIs',
+        'Custom UI implementation featuring clean Glassmorphism and Cyberpunk design aesthetics',
+        'Dynamic state management for complex, multi-layered user interactions'
+      ],
+      technologies: ['React.js', 'Gemini AI', 'Deepgram API', 'REST APIs', 'Asynchronous JavaScript', 'UI/UX Design'],
+
       links: {
         live: '', // No live link due to private API keys
         github: 'https://github.com/Mahesh0002/Jotai',
       },
     },
     {
-      id: 2,
+      id: 4,
       title: 'Campus Connect – Interactive Student Forum',
       description:
         'Campus Connect is a modern web-based student forum designed to facilitate academic discussions, peer support, and collaborative learning. It allows students to post questions, participate in threaded conversations, and engage with topics in a clean, responsive interface.',
