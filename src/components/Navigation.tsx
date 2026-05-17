@@ -92,7 +92,7 @@ const Navigation = () => {
             >
               <Mail size={20} />
             </a>
-            <a href="/resume.pdf" download>
+            <a href="https://github.com/Mahesh0002/Dy_resume/releases/download/live/Mahesh_Resume.pdf" download target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="sm" className="glow-effect">
               <Download size={16} className="mr-2" />
               Resume
