@@ -8,8 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "lint": "eslint . --report-unused-disable-directives",
-    "prepare": "husky install"
+    "lint": "eslint . --report-unused-disable-directives"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
